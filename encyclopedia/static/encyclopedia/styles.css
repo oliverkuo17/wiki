@@ -1,0 +1,52 @@
+html{ overflow-y: scroll;}
+
+body {
+    margin: 0;
+    background-color: white;
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+textarea {
+    height: 90vh;
+    width: 80%;
+}
+
+.main {
+    padding: 10px;
+}
+
+.search {
+    width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.sidebar {
+    background-color: #f0f0f0;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 5px;
+}
+
+.btn {
+    margin: 20px 0px;
+    border:0.5px solid lightgray;
+    outline:none;
+    padding: 5px;
+}
+
+.btn:hover{
+    background-color: dodgerblue;
+    color:white;
+}

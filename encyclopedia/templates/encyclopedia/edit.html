@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1>Editing {{ title }}</h1>
+    <form action="{% url 'encyclopedia:editEntry' title %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input class="btn" type="submit" value="Save">
+    </form>
+    <p>You can use markdown writing and formatting syntax to form the entry. Please refer to <a href="https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax">Basic writing and formatting syntax</a></p>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <div class="alert alert-danger" role="alert">
+        {% if error == 1 %}
+            <h4 class="alert-heading">Error: {{ title }} does not exist</h4>
+            <p>You can create a new entry by clicking <a href="{% url 'encyclopedia:newEntry' %}">here</a></p>
+        {% elif error == 2 %}
+            <h4 class="alert-heading">Error: {{ title }} already exists!</h4>
+            <p>Please try another word or use <a href="{% url 'encyclopedia:editEntry' title %}">edit</a> function.</p>
+        {% elif error == 3 %}
+            <h4 class="alert-heading">Error: The input is invalid!</h4>
+            <p>Please try again.</p>
+        {% endif %}
+    </div>
+{% endblock %}
